@@ -1,0 +1,820 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+
+:root
+{
+	--green: green;
+	--black: #130f40;
+	--light-color: #666;
+    --box-shadow: 0 3rem 5rem rgba(0,0,0,.1);
+
+	--border: .4rem solid rgba(0,0,0.1);
+	--outline: .9rem solid rgba(0,0,0.1);
+}
+
+*
+{
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	text-decoration: none;
+	transition: all .2s linear;
+}
+
+html
+{
+	font-size: 8.5%;
+	overflow-x: hidden ;
+    scroll-bahavior: smooth;
+    scroll-pading-top:7rem;
+}
+body
+{
+	background:#eee;
+}
+
+section
+{
+	padding: 16rem 9%;
+}
+
+.heading
+{
+	text-align: center;
+	padding: 8rem 0;
+	padding-bottom: 10rem;
+	font-size: 19.5rem;
+	color: var(--black);
+}
+
+.heading span
+{
+    background: var(--green);
+    color: #fff;
+    display: inline-block;
+    padding: 6.5rem 32rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%,0% 0%);
+}
+
+.btn
+{
+	border: .2rem solid var(--black);
+	margin-top: 1rem;
+	display: inline-block;
+	padding: 4rem 6rem;
+	font-size: 12rem;
+	border-radius: .5rem;
+	color: var(--black);
+	cursor: pointer;
+	background: none;
+
+
+
+}
+
+.btn:hover
+{
+	background: var(--green);
+	color: #fff;
+
+}
+
+.header
+{
+	border:0px solid;
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	z-index: 1500;
+    display:flex;
+    align-item:center;
+    justify-content:space-between;
+    padding:6rem 10%;
+    background:#fff;
+    --box-shadow: var(--box-shadow);
+
+}
+.header .logo
+{ 
+	font-size:20.5rem;
+	font-weight:bolder;
+}
+
+.header .logo i
+{
+ color: var(--green);
+}
+.header .navbar a
+ {
+   font-size: 15.7rem;
+   margin :0 8rem;
+   color:var(--black);
+
+}
+.header .navbar a:hover
+ {
+ 	color:var(--green);
+
+}
+
+.header .icons div
+{
+	border: 0px solid;
+	height: 32.5rem;
+	width: 32.5rem;
+	line-height: 32.5rem;
+	border-radius: 0.5rem;
+	background-color: #eee;
+	color: var(--black);
+	font-size: 18rem;
+	margin-right: .3rem ;
+	text-align: center;
+	cursor: pointer;
+}
+
+.header .icons div:hover
+{
+	background: var(--green);
+	color: white;
+}
+
+#menu-btn
+{
+	display: none;
+
+}
+
+.header .search-form
+{
+	border: 0px solid;
+    position: absolute;
+    top: 120%;
+    right: -110%;
+    width: 155rem;
+    height: 12.5rem;
+    background: #fff;
+    border-radius: .8rem;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+
+}
+
+.header .search-form.active
+{
+	right: 10rem;
+	transition: .4s linear;
+}
+
+.header .search-form label
+{
+	font-size: 13.2rem;
+	padding-right: 10.5rem;
+	color: var(--black);
+	cursor: pointer;
+
+}
+
+
+.header .search-form label:hover
+{
+	color: var(--green);
+}
+
+
+.header .shopping-cart
+{
+	border: 0px solid;
+	position: absolute;
+	top: 110%;
+	right: -110%;
+	padding: 2rem;
+	border-radius: .5rem;
+	box-shadow: var(--box-shadow);
+	width: 240rem;
+	background: #fff;
+
+}
+
+.header .shopping-cart.active
+{
+    right: 10rem;
+    transition: .4s linear;
+}
+
+
+.header .shopping-cart .box
+{
+	border: 0px solid blue;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	position: relative;
+	margin: 1rem 0;
+
+}
+
+.header .shopping-cart .box img
+{
+	height: 70rem;
+
+}
+.header .shopping-cart .box  .fa-trash
+{
+	font-size: 12rem;
+	position: absolute;
+	top: 50%;
+	right: 2rem;
+	cursor: pointer;
+	color: var(--light-color);
+	transform: translateY(-50%);
+
+
+}
+
+.header .shopping-cart .box  .fa-trash:hover
+{
+	color: var(--green);
+}
+
+.header .shopping-cart .box .content h3
+{
+    color: var(--black);
+    font-size: 14rem;
+    padding: 1rem;
+}
+
+.header .shopping-cart .box .content span
+{
+    color: var(--light-color);
+    font-size: 10rem;
+}
+
+.header .shopping-cart .box .content .quantity
+{
+	padding-left: 1rem;
+}
+
+.header .shopping-cart .total
+{
+	font-size: 15rem;
+	padding: 1rem 0;
+	text-align: center;
+	color: var(--black);
+}
+
+.header .shopping-cart .btn
+{
+    display: block;
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.header .login-form
+{
+	border: 0px solid;
+	position: absolute;
+	height: 180rem;
+	width: 200rem;
+	top: 130%;
+	right: -110%;
+	box-shadow: var(--box-shadow);
+	padding: 4rem;
+	border-radius: .8rem;
+	background: #fff;
+	text-align: center;
+
+}
+
+.header .login-form.active
+{
+	right: 2rem;
+	transition: .4s linear;
+}
+
+.header .login-form h3
+{
+	font-size: 25.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+
+}
+
+.header .login-form .box
+{
+	width: 100%;
+	border: 0px solid;
+	margin: 3rem 0;
+	background: #eee;
+	border-radius: .5rem;
+	padding: 4rem;
+	font-size: 10rem;
+    color: var(--black);
+    text-transform: none;
+}
+
+.header .login-form p
+{
+	font-size: 8.4rem;
+	padding: 2rem 0;
+	color: var(--light-color);
+
+
+}
+
+.header .login-form p a
+{
+	color: var(--green);
+	text-decoration: underline;
+
+}
+
+.Home
+{
+	border: 0px solid;
+	display: flex;
+	justify-content: center;
+	background: url(../image/banner-img.jpg)no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding-top: 100rem;
+	padding-bottom: 100rem;
+
+}
+
+.Home .content 
+{
+	border: 0px solid;
+	text-align: center;
+	width: 360rem;
+
+
+}
+.Home .content h3
+{
+	color:var(--black);
+	font-size:20rem;
+}
+.Home .content h3 span
+{
+	color:var(--green);
+	
+}
+.Home .content p
+{
+	color:var(--light-color);
+	font-size: 10rem;
+	padding: 2rem 0;
+	line-height: 1.8;
+}
+
+.Features .box-container
+{
+	border: 0px solid;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200rem, 1fr));
+	gap: 7.5rem;
+}
+
+
+
+.Features .box-container .box
+{
+	border: 0px solid red;
+	padding: 8rem 2rem;
+	background: #fff;
+	outline: var(--outline);
+	outline-offset: -7rem;
+	text-align: center;
+	box-shadow: var(--box-shadow);
+
+}
+
+.Features .box-container .box:hover
+{
+	box-shadow: 2px 1px 5px 2px var(--green);
+
+
+}
+
+.Features .box-container .box img
+{
+	margin: 2rem 0;
+	height: 90rem;
+
+}
+
+.Features .box-container .box h3
+{
+	font-size: 20.5rem;
+	line-height: 60.8rem;
+	color: var(--black);
+
+}
+
+.Features .box-container .box p
+{
+	font-size: 13.5rem;
+	line-height: 15.8rem;
+	color: var(--light-color);
+	padding: 10rem;
+
+	
+}
+
+
+.Products .Product-slider
+{
+	border: 0px solid;
+	padding: 4rem;
+
+}
+
+
+.Products .Product-slider:first-child
+{
+	margin-bottom: 6rem ;
+}
+
+
+.Products .Product-slider .box
+{
+	border: 0px solid red;
+	background: #fff;
+	border-radius: .5rem;
+	text-align: center;
+	padding: 14rem 70rem;
+    outline-offset: -4rem;
+    outline: var(--outline);
+    box-shadow: var(--box-shadow);
+    transition: .3s linear;
+    width: 243rem;
+    height: 260rem;
+
+
+}
+
+.Products .Product-slider .box:hover
+{
+	box-shadow: 2px 1px 5px 2px var(--green);
+}
+
+.Products .Product-slider .box img
+{
+	height: 120rem;
+	position: center;
+
+}
+
+.Products .Product-slider .box h1
+{
+    font-size: 13.5rem;
+    color: var(--black);
+
+
+
+}
+
+.Products .Product-slider .box .price
+{
+	font-size: 10.8rem;
+	color: var(--light-color);
+	padding: .9rem 0;
+
+
+}
+
+.Products .Product-slider .box .stars i
+{
+    font-size: 9.7rem;
+    color: orange;
+    padding: .9rem 0;
+
+
+}
+
+
+.Categories .box-container
+{
+	border: 0px solid;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100rem, 1fr));
+	gap: 7.5rem;
+}
+
+.Categories .box-container .box
+{
+	padding: 5rem 0;
+	background: #fff;
+	border-radius: .8rem;
+	box-shadow: var(--box-shadow);
+	outline: var(--outline);
+	outline-offset: -4rem;
+	text-align: center;
+
+
+}
+
+.Categories .box-container .box:hover
+{
+    box-shadow: 2px 1px 5px 2px var(--green);
+}
+
+.Categories .box-container .box img
+{
+	margin: 2rem 0;
+	height: 120rem;
+}
+
+.Categories .box-container .box h3
+
+{
+	font-size: 13.5rem;
+	color: var(--black);
+	line-height:1.8 ;
+
+}
+
+.Categories .box-container .box p
+
+{
+	font-size: 10.5rem;
+	color: var(--light-color);
+	line-height:2.8 ;
+	padding: 1rem 0;
+}
+
+.Reviews .review-slider
+{
+	border: 0px solid;
+	padding: 8rem;
+
+}
+
+.Reviews .review-slider .box
+{
+	
+    border: 0px solid red;
+	background: #fff;
+	border-radius: .5rem;
+	text-align: center;
+	padding: 14rem 10rem;
+    outline-offset: -4rem;
+    outline: var(--outline);
+    box-shadow: var(--box-shadow);
+    transition: .3s linear;
+    width: 200rem;
+}
+
+.Reviews .review-slider .box:hover
+{
+	box-shadow: 2px 1px 5px 2px var(--green);
+}
+
+.Reviews .review-slider .box img
+{
+	height: 90rem;
+	width: 90rem;
+    border-radius: 50%;
+
+}
+
+.Reviews .review-slider .box p
+{
+	padding: 2rem 0;
+	line-height: 1.8;
+	color: var(--light-color);
+	font-size: 9.5rem;
+
+    
+}
+
+
+.Reviews .review-slider .box h3
+{
+	padding-bottom: .9rem;
+	color: var(--black);
+	font-size: 12.5rem;
+}
+
+.Reviews .review-slider .box .stars i
+{
+	color: orange;
+	font-size: 9.5rem;
+}
+
+
+.Blogs .box-container
+{
+	border: 0px solid;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100rem, 1fr));
+	gap: 7.5rem;
+}
+
+.Blogs .box-container .box
+{
+	overflow:hidden ;
+	border-radius: 1.5rem;
+	box-shadow: var(--box-shadow);
+	background: #fff;
+
+}
+
+.Blogs .box-container .box img
+{
+	height: 170rem;
+	width: 250rem;
+	object-fit: cover;
+
+}
+
+.Blogs .box-container .box .content
+{
+	padding: 5rem;
+
+}
+
+.Blogs .box-container .box .content .icons
+{
+	
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom:5rem ;
+	margin-bottom: 2rem;
+	border-bottom:var(--border) ;
+
+
+}
+
+
+.Blogs .box-container .box .content .icons a
+{
+	color: var(--light-color);
+	font-size: 8.5rem;
+
+}
+
+.Blogs .box-container .box .content .icons a i
+{
+	color: green;
+	padding-right: .5rem;
+
+	
+}
+
+.Blogs .box-container .box .content .icons a:hover
+{
+	color: var(--black);
+
+}
+
+.Blogs .box-container .box .content h3
+{
+	line-height: 2;
+	color: var(--black);
+	font-size: 10.5rem;
+	padding: 3.5rem 0;
+
+}
+
+.Blogs .box-container .box .content p
+{
+   line-height: 1.8;
+	color: var(--light-color);
+	font-size: 8.5rem;
+	padding: 3.5rem 0;
+}
+
+
+.fotter
+{
+	background: #fff;
+
+}
+
+.fotter .box-container
+{
+	border: 0px solid;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100rem, 1fr));
+	gap: 9.5rem;
+	
+}
+
+.fotter .box-container .box h3
+{
+     font-size: 13.5rem;
+     color: var(--black);
+     padding: 4rem 0;
+     line-height: 2.5;
+
+}
+
+.fotter .box-container .box h3 i
+{
+	color: var(--green);
+	line-height: 2;
+
+
+}
+
+.fotter .box-container .box .links
+{
+	display: block;
+     font-size: 10.5rem;
+     color: var(--light-color);
+     padding: 2rem 0;
+
+}
+
+.fotter .box-container .box p
+{
+	line-height: 2.5;
+     font-size: 10.5rem;
+     color: var(--black);
+     padding: 2rem 0;
+
+}
+
+.fotter .box-container .box  .links i
+{
+    color: var(--green);
+    padding-right: .8rem;
+
+}
+
+.fotter .box-container .box .links:hover i
+{
+	padding-right: 3rem;
+
+} 
+
+.fotter .box-container .box .share a
+{
+	border: 0px solid;
+	height: 24rem;
+	width: 24rem;
+	line-height: 24rem;
+	border-radius: .5rem;
+	font-size: 12.5rem;
+	color: var(--black);
+	margin-left:.5rem ;
+	background: #eee;
+	text-align: center;
+
+
+
+}
+
+.fotter .box-container .box .share a:hover
+{
+	background: var(--green);
+	color: #fff;
+
+}
+
+.fotter .box-container .box .email
+{
+	width: 100%;
+	margin: 4.5rem 0;
+	padding: 3.5rem;
+	border-radius: 1.5rem;
+	background: #eee;
+	font-size: 10.5rem;
+	color: var(--black);
+	text-transform: none;
+
+}
+
+.fotter .box-container .box .Payment-img
+{
+	margin-top: 15rem;
+	height: 25px;
+    width: 250px;
+   
+}
+
+.fotter .credit
+{
+	text-align: center;
+	margin-top: 7rem;
+	padding: 1rem;
+	padding-top: 1.5rem;
+	font-size: 12.5rem;
+	color: var(--black);
+	border-top: var(--border);
+
+
+}
+
+.fotter .credit span
+{
+	color: var(--green);
+
+}
+
